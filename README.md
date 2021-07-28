@@ -1,2 +1,1 @@
-# kanban
-Kanban board in native js.
+# JSP-2.0
