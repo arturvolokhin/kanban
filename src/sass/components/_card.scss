@@ -98,7 +98,7 @@
             opacity: 0.6;
         }
 
-        &:before {
+        &::before {
             position: absolute;
             left: 15px;
             content: ' ';
@@ -108,7 +108,7 @@
             transform: rotate(45deg);
         }
 
-        &:after {
+        &::after {
             position: absolute;
             left: 15px;
             content: ' ';
@@ -155,19 +155,97 @@
             color: #fff;
         }
         
+        &--submit {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            top: calc(100% - 15px);
+            left: -10px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 2px solid #ccc;
+            background: #302a2a;
+            cursor: pointer;
 
-        &--buttons {
-            display: flex;
-            justify-content: space-between;
+            &::after {
+                content: '';
+                position: absolute;
+                top: 8px;
+                left: 6px;
+                width: 55%;
+                height: 33%;
+                background: transparent;
+                border: 3px solid #ccc;
+                border-top: none;
+                border-right: none;
+                border-radius: 3px;
+                transform: rotate(-45deg);
+                transition: 0.1s linear;
+            }
+
+            &:hover {
+            border: 3px solid #ccc;
+            }
+
+            &:hover::after{
+                border: 3px solid #ccc;
+                border-top: none;
+                border-right: none;
+            }
+                
         }
         
+        &--cancel {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            bottom: calc(0% - 15px);
+            right: -10px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 2px solid #ccc;
+            background: #302a2a;
+            cursor: pointer;
 
-        &--button {
-            padding: 5px;
-            font-size: 20px;
-            width: 40%;
-            border-radius: 10px;
-            font-family: 'Gilroy';
-        }
+            &::after {
+                content: '';
+                position: absolute;
+                top: calc(50% - 14px);
+                left: calc(50% - 1px);
+                width: 2px;
+                height: 28px;
+                background: #ccc;
+                transform: rotate(45deg);
+            }
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: calc(50% - 14px);
+                left: calc(50% - 1px);
+                width: 2px;
+                height: 28px;
+                background: #ccc;
+                transform: rotate(-45deg);
+            }
+
+            &:hover {
+            border: 3px solid #ccc;
+            }
+
+            &:hover::after{
+                height: 26px;
+                top: calc(50% - 13px);
+            }
+
+            &:hover::before{
+                height: 26px;
+                top: calc(50% - 13px);
+            }
+                
+        }   
+    
     }
-}    
+}
+    
+ 

@@ -575,7 +575,7 @@ textarea {
   opacity: 0.6;
 }
 
-.kanban__card-close:before {
+.kanban__card-close::before {
   position: absolute;
   left: 15px;
   content: ' ';
@@ -586,7 +586,7 @@ textarea {
           transform: rotate(45deg);
 }
 
-.kanban__card-close:after {
+.kanban__card-close::after {
   position: absolute;
   left: 15px;
   content: ' ';
@@ -634,21 +634,96 @@ textarea {
   color: #fff;
 }
 
-.kanban__card-edit--buttons {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+.kanban__card-edit--submit {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: calc(100% - 15px);
+  left: -10px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid #ccc;
+  background: #302a2a;
+  cursor: pointer;
 }
 
-.kanban__card-edit--button {
-  padding: 5px;
-  font-size: 20px;
-  width: 40%;
-  border-radius: 10px;
-  font-family: 'Gilroy';
+.kanban__card-edit--submit::after {
+  content: '';
+  position: absolute;
+  top: 8px;
+  left: 6px;
+  width: 55%;
+  height: 33%;
+  background: transparent;
+  border: 3px solid #ccc;
+  border-top: none;
+  border-right: none;
+  border-radius: 3px;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  -webkit-transition: 0.1s linear;
+  transition: 0.1s linear;
+}
+
+.kanban__card-edit--submit:hover {
+  border: 3px solid #ccc;
+}
+
+.kanban__card-edit--submit:hover::after {
+  border: 3px solid #ccc;
+  border-top: none;
+  border-right: none;
+}
+
+.kanban__card-edit--cancel {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  bottom: calc(0% - 15px);
+  right: -10px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid #ccc;
+  background: #302a2a;
+  cursor: pointer;
+}
+
+.kanban__card-edit--cancel::after {
+  content: '';
+  position: absolute;
+  top: calc(50% - 14px);
+  left: calc(50% - 1px);
+  width: 2px;
+  height: 28px;
+  background: #ccc;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.kanban__card-edit--cancel::before {
+  content: '';
+  position: absolute;
+  top: calc(50% - 14px);
+  left: calc(50% - 1px);
+  width: 2px;
+  height: 28px;
+  background: #ccc;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.kanban__card-edit--cancel:hover {
+  border: 3px solid #ccc;
+}
+
+.kanban__card-edit--cancel:hover::after {
+  height: 26px;
+  top: calc(50% - 13px);
+}
+
+.kanban__card-edit--cancel:hover::before {
+  height: 26px;
+  top: calc(50% - 13px);
 }
 
 .kanban__card-button {

@@ -74,15 +74,10 @@ export class App {
                         class="kanban__card-edit--name" 
                         placeholder="Изменить название заметки">
                     <textarea class="kanban__card-edit--comment" 
-                        placeholder="Изменить комментарий заметки">
-                        ${card.comment}
+                        placeholder="Изменить комментарий заметки">${card.comment}
                     </textarea>
-                    <div class="kanban__card-edit--buttons">
-                        <button class="kanban__card-edit--button  kanban__card-edit--submit">
-                            Сохранить</button>
-                        <button class="kanban__card-edit--button  kanban__card-edit--cancel">
-                            Отменить</button>
-                    </div>
+                    <button class="kanban__card-edit--submit"></button>
+                    <button class="kanban__card-edit--cancel"></button>
                 </ul>`;
     }
 
