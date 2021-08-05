@@ -33,3 +33,5 @@
 
 
 # [Нажмите](https://arturvolokhin.github.io/kanban/), чтобы открыть приложение.
+
+<img src="https://github.com/arturvolokhin/images/blob/main/scrinshots/kanban-superb.png"/>
