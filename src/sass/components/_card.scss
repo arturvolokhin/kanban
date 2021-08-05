@@ -21,6 +21,9 @@
         top: calc(50% - 110px);
         left: calc(50% - 300px);
         padding: 10px 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
         border-radius: 20px;
         background: rgba(0, 0, 0, 0.9);
         width: 600px;
@@ -36,8 +39,10 @@
 
     &-settings {
         position: absolute;
-        top: calc(50% - 72px);
-        width: 85%;
+        top: calc(50% - 60px);
+        width: 90%;
+        left: 10%;
+        margin: 0 0 0 -5%;
         background: #000;
         border-radius: 10px;
         font-size: 16px;
@@ -121,8 +126,9 @@
    
     &-edit {
         position: absolute;
-        top: calc(50% - 72px);
-        left: 5px;
+        top: calc(50% - 60px);
+        left: 10%;
+        margin: 0 0 0 -5%;
         width: 90%;
         padding: 20px;
         background: #000;
@@ -159,8 +165,8 @@
             position: absolute;
             width: 40px;
             height: 40px;
-            top: calc(100% - 15px);
-            left: -10px;
+            bottom: -20px;
+            left: 20px;
             border-radius: 50%;
             overflow: hidden;
             border: 2px solid #ccc;
@@ -199,8 +205,8 @@
             position: absolute;
             width: 40px;
             height: 40px;
-            bottom: calc(0% - 15px);
-            right: -10px;
+            bottom: -20px;
+            right: 20px;
             border-radius: 50%;
             overflow: hidden;
             border: 2px solid #ccc;
